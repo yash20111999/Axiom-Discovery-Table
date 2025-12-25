@@ -1,8 +1,8 @@
+import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "./providers";
 
-export const metadata = {
-  title: "Axiom Discovery",
+export const metadata: Metadata = {
+  title: "Axiom Discovery Table",
   description: "Axiom discovery table clone",
 };
 
@@ -12,9 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <Providers>{children}</Providers>
+    <html lang="en" className="dark">
+      <body className="bg-background text-foreground antialiased">
+        {children}
       </body>
     </html>
   );
